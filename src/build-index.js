@@ -5,7 +5,7 @@ const indexContent = fs.readFileSync(path.resolve(__dirname, './index.html'), 'u
 
 const imagesDir = path.resolve(__dirname, '../assets/images');
 
-let imageHTML = '<TABLE BGCOLOR=#E0E0E0>';
+let imageHTML = '<TABLE BGCOLOR=#A0A0A0>';
 
 const dirents = fs.readdirSync(imagesDir, { withFileTypes: true });
 for (const dirent of dirents) {
@@ -28,7 +28,7 @@ function getPictures (dirName) {
   for (const picture of pictures) {
     if (picture.name === '.DS_Store') continue;
     if (picture.isDirectory()) throw new Error('Found a sub directory');
-    const ref = `assets/images/${dirName}/${picture.name}`
+    const ref = `images/${dirName}/${picture.name}`
     res += `\n\t\t<TR><TD ALIGN=CENTER><IMG SRC="${ref}" HEIGHT=64><BR><A HREF="${ref}">${picture.name}</A></TD>`
   }
   return res;

@@ -19,7 +19,8 @@
   "license": "BSD-3-Clause",
   "author": "",
   "scripts": {
-    "build": "grunt",
+    "build": "npm run build-index && npm run build-grunt",
+    "build-grunt": "grunt",
     "build-index": "node src/build-index.js"
   },
   "dependencies": {
