@@ -1,0 +1,130 @@
+// Custom variables
+
+// Core visual identity colors
+$hds-red = #BD1026
+$hds-green = #719726
+$hds-blue = #2D68AC
+$hds-black = #1A1A1A
+$hds-dark-gray = #4A4A4A
+$hds-light-gray = #C8C8C8
+
+$white ?= #FFF
+
+$light-type-background-hex ?= #EDEFF3
+$light-type-background ?= rgba(0, 8, 64, 0.04)
+
+$default-padding ?= 15px
+
+
+// Bootstrap variables reference: http://getbootstrap.com/customize/#less-variables
+
+// Colors
+
+$gray-darker ?= $hds-black
+$gray-dark ?= $hds-dark-gray
+$gray ?= #666
+$gray-light ?= $hds-light-gray
+$gray-lighter ?= #EEE
+
+$brand-primary ?= $hds-green
+$brand-success ?= #5cb85c
+$brand-info ?= #5bc0de
+$brand-warning ?= #f0ad4e
+$brand-danger ?= #d9534f
+
+// Scaffolding
+
+$body-bg ?= #F4F4F4
+$body-fg ?= $white
+
+$text-color ?= $hds-black
+
+$link-color ?= $brand-primary
+$link-hover-color ?= darken($link-color, 15%)
+$link-hover-decoration ?= underline
+
+// Typography
+
+$font-family-sans-serif ?= 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif
+$font-family-condensed ?= 'Roboto Condensed', $font-family-sans-serif
+$font-family-base ?= $font-family-sans-serif
+
+$font-size-base ?= 16px
+
+// use modular scale: major third
+$font-scale-factor = 1.3333
+
+$font-size-large ?= ceil($font-size-base * $font-scale-factor)
+$font-size-small ?= ceil($font-size-base / $font-scale-factor)
+
+$font-size-h1 ?= floor($font-size-base * ($font-scale-factor ** 3))
+$font-size-h2 ?= floor($font-size-base * ($font-scale-factor ** 2))
+$font-size-h3 ?= ceil($font-size-base * $font-scale-factor)
+$font-size-h4 ?= $font-size-h5 ?= $font-size-h6 ?= $font-size-base
+
+$headings-font-family ?= $font-family-condensed
+$headings-font-weight ?= 500
+$headings-line-height ?= 1.1
+
+// Iconography
+
+$icon-font-path ?= 'fonts/'
+//** File name for all font files.
+$icon-font-name ?= 'glyphicons-halflings-regular'
+
+// Components
+
+$padding-base-vertical ?= 6px
+$padding-large-vertical ?= 10px
+$padding-small-vertical ?= 5px
+$padding-xs-vertical ?= 1px
+
+$padding-base-horizontal ?= 12px
+$padding-large-horizontal ?= 16px
+$padding-small-horizontal ?= 10px
+$padding-xs-horizontal ?= 5px
+
+$border-radius-base ?= 3px
+$border-radius-large ?= 5px
+$border-radius-small ?= 2px
+
+$component-active-color ?= $white
+$component-active-bg ?= $brand-primary
+
+// Tables
+
+$table-border-color = $hds-light-gray
+
+// Buttons
+
+$btn-font-weight ?= normal
+
+/*$btn-default-color ?= $white*/
+/*$btn-default-bg ?= $hds-dark-gray*/
+/*$btn-default-border ?= darken($btn-default-bg, 5%)*/
+
+$btn-primary-color ?= $white
+$btn-primary-bg ?= $brand-primary
+$btn-primary-border ?= darken($btn-primary-bg, 5%)
+
+// Navbar
+
+$navbar-default-bg ?= $white
+$navbar-height ?= 50px
+$navbar-text-color ?= $gray-light
+
+// TODO: review this (are there more generic variables to use?)
+$navbar-default-link-hover-color ?= $white
+$navbar-default-link-hover-bg ?= $brand-primary
+
+// Code
+
+$code-color ?= $text-color
+$code-bg ?= $light-type-background
+$pre-color ?= $code-color
+$pre-bg ?= $code-bg
+
+// Fix "bold" weights to match actual fonts
+
+$bold-weight ?= 500
+$alert-link-font-weight ?= $badge-font-weight ?= $close-font-weight ?= $bold-weight

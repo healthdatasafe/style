@@ -1,0 +1,40 @@
+{
+  "name": "hds-style",
+  "version": "0.3.1",
+  "description": "HDS style assets: reference CSS, JS and media files (based on Bootstrap).",
+  "keywords": [
+    "hds",
+    "style",
+    "css",
+    "bootstrap"
+  ],
+  "homepage": "https://github.com/healthdatasafe/style",
+  "bugs": {
+    "url": "https://github.com/healthdatasafe/style/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/healthdatasafe/style.git"
+  },
+  "license": "BSD-3-Clause",
+  "author": "",
+  "scripts": {
+    "build": "grunt",
+    "build-index": "node src/build-index.js"
+  },
+  "dependencies": {
+    "bootstrap-styl": "^3"
+  },
+  "devDependencies": {
+    "grunt": "^1.5.3",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-uglify": "^5.2.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-replace": "^2.0.2",
+    "stylus": "^0.57.0"
+  }
+}
