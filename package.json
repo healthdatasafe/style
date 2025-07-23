@@ -1,0 +1,24 @@
+{
+  "name": "hds-style",
+  "version": "0.0.1",
+  "description": "HDS Reference CSS, JS and media files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/healthdatasafe/style.git"
+  },
+  "keywords": [
+    "HealthDataSafe",
+    "CSS",
+    "Icons"
+  ],
+  "author": "Health Data Safe Foundation",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/healthdatasafe/style/issues"
+  },
+  "homepage": "https://github.com/healthdatasafe/style#readme"
+}
