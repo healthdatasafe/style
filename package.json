@@ -20,7 +20,7 @@
   "homepage": "https://github.com/healthdatasafe/style#readme",
   "scripts": {
     "build": "npm run copy && npm run minify",
-    "copy": "cp -R src/ dist/ && rm dist/input.css",
+    "copy": "rm -rf dist/ && cp -R src/ dist/ && rm dist/input.css",
     "css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/hds.css --watch",
     "dev": "npx concurrently --kill-others \"npm run css\" \"npm run serve\"",
     "format": "npx prettier . --check",
