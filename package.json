@@ -7,11 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/healthdatasafe/style.git"
   },
-  "keywords": [
-    "HealthDataSafe",
-    "CSS",
-    "Icons"
-  ],
+  "keywords": ["HealthDataSafe", "CSS", "Icons"],
   "author": "Health Data Safe Foundation",
   "license": "UNLICENSED",
   "bugs": {
