@@ -14,6 +14,7 @@ echo "
 Installing Node modules from 'package.json' if necessary...
 "
 npm install
+npm run build
 
 if [ ! -d build ]
 then

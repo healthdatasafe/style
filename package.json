@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "HDS Reference CSS, JS and media files.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/healthdatasafe/style.git"
@@ -20,5 +17,24 @@
   "bugs": {
     "url": "https://github.com/healthdatasafe/style/issues"
   },
-  "homepage": "https://github.com/healthdatasafe/style#readme"
+  "homepage": "https://github.com/healthdatasafe/style#readme",
+  "scripts": {
+    "build": "npm run copy && npm run minify",
+    "copy": "cp -R src/ dist/ && rm dist/input.css",
+    "css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/hds.css --watch",
+    "dev": "npx concurrently --kill-others \"npm run css\" \"npm run serve\"",
+    "format": "npx prettier . --check",
+    "format:fix": "npx prettier . --write",
+    "minify": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/hds.min.css --minify",
+    "serve": "npx livereload ./src"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/typography": "^0.5.16",
+    "concurrently": "^9.2.0",
+    "livereload": "^0.9.3",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.11"
+  }
 }
