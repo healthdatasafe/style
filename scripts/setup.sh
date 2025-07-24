@@ -16,10 +16,10 @@ Installing Node modules from 'package.json' if necessary...
 npm install
 npm run build
 
-if [ ! -d build ]
+if [ ! -d dist ]
 then
   echo "
-Setting up 'build' folder for publishing to GitHub pages...
+Setting up 'dist' folder for publishing to GitHub pages...
 "
   git clone -b gh-pages git@github.com:healthdatasafe/style.git dist
 fi
