@@ -2,3 +2,112 @@
 @source "index.html";
 @import "hds-style/css/theme.css";
 @import "hds-style/css/palettes.css";
+
+/*
+ * Base HTML element styles
+ *
+ * Tailwind's preflight resets all element styling. These rules restore
+ * sensible defaults so plain HTML pages that link hds.min.css look good
+ * without needing Tailwind utility classes.
+ */
+
+/* Body */
+body {
+  font-family: var(--font-body, "Inter", ui-sans-serif, system-ui, sans-serif);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--hds-foreground, #111928);
+  background-color: var(--hds-background, #f9fafb);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans, "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--hds-foreground, #111928);
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.1em; }
+
+/* Paragraphs */
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+  color: var(--hds-primary, #1c64f2);
+  text-decoration: underline;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+/* Horizontal rule */
+hr {
+  border-top: 1px solid var(--hds-border, #e5e7eb);
+  margin: 1.5em 0;
+}
+
+/* Lists */
+ul { list-style: disc; padding-left: 1.5em; margin: 0.5em 0; }
+ol { list-style: decimal; padding-left: 1.5em; margin: 0.5em 0; }
+li { margin: 0.25em 0; }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+th, td {
+  padding: 0.5em 0.75em;
+  text-align: left;
+  border-bottom: 1px solid var(--hds-border, #e5e7eb);
+}
+th {
+  font-weight: 600;
+  background-color: var(--hds-muted, #f3f4f6);
+}
+tr:hover {
+  background-color: var(--hds-muted, #f3f4f6);
+}
+
+/* Code */
+code {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.875em;
+  background-color: var(--hds-muted, #f3f4f6);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25em;
+}
+pre {
+  background-color: var(--hds-muted, #f3f4f6);
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Container utility */
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em 2em;
+}
+
+/* Images inline with text */
+img {
+  display: inline;
+}
