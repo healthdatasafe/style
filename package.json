@@ -25,7 +25,7 @@
     "serve": "npx livereload ./src"
   },
   "dependencies": {
-    "hds-style": "file:../style-package"
+    "hds-style": "git+https://github.com/healthdatasafe/style-package.git"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.11",
