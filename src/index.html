@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="palette-doctor">
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -9,324 +9,226 @@
       type="image/x-icon"
     />
     <link href="./hds.css" rel="stylesheet" />
-    <title>HDS Style Assets</title>
-    <!-- <script src="http://localhost:35729/livereload.js?snipver=1"></script> -->
+    <title>HDS Style Guide</title>
   </head>
-  <body>
-    <div class="mx-auto max-w-7xl">
-      <header class="mx-auto prose text-center">
-        <img
-          alt="HDS"
-          class="mx-auto"
-          src="./images/logos/stacked/hds-logo-stacked-500x500-color.png"
-          width="128"
-        />
-        <h1 class="font-sans font-light uppercase">Style Assets</h1>
-        <h2 class="font-normal">Reference CSS and Images</h2>
-      </header>
+  <body
+    class="min-h-screen bg-[var(--hds-background)] font-body text-[var(--hds-foreground)]"
+  >
+    <!-- Top bar -->
+    <nav
+      class="sticky top-0 z-50 border-b border-[var(--hds-border)] bg-[var(--hds-card)]"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            alt="HDS"
+            class="h-8"
+            src="./images/logos/horizontal/hds-logo-hz-color.svg"
+          />
+          <span class="text-lg font-medium">Style Guide</span>
+        </div>
+        <div class="flex gap-2" id="palette-switcher">
+          <button
+            class="rounded-lg px-3 py-1.5 text-sm font-medium transition-shadow hover:shadow-md"
+            data-palette="palette-doctor"
+            id="btn-doctor"
+            style="
+              background-color: #1c64f2;
+              color: white;
+              border: 2px solid #1c64f2;
+            "
+          >
+            Doctor
+          </button>
+          <button
+            class="rounded-lg px-3 py-1.5 text-sm font-medium transition-shadow hover:shadow-md"
+            data-palette="palette-patient"
+            id="btn-patient"
+            style="
+              background-color: #0d9488;
+              color: white;
+              border: 2px solid #0d9488;
+            "
+          >
+            Patient
+          </button>
+          <button
+            class="rounded-lg px-3 py-1.5 text-sm font-medium transition-shadow hover:shadow-md"
+            data-palette="palette-dark"
+            id="btn-dark"
+            style="
+              background-color: #111827;
+              color: #f9fafb;
+              border: 2px solid #374151;
+            "
+          >
+            Dark
+          </button>
+        </div>
+      </div>
+    </nav>
 
-      <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
+    <div class="mx-auto max-w-7xl px-4 py-8">
+      <!-- ============================================================ -->
+      <!-- COLOR SWATCHES -->
+      <!-- ============================================================ -->
+      <section class="mb-12">
+        <h2
+          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
+        >
+          Color Palette
+        </h2>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-primary)]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-primary
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-secondary)]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-secondary
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-accent)]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-accent
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-muted)]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-muted
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-destructive)]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-destructive
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-background)] border border-[var(--hds-border)]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-background
+            </div>
+          </div>
+        </div>
 
-      <article class="prose">
-        <h3 class="text-left italic">Logos</h3>
-      </article>
-      <section class="m-4 mx-auto prose bg-slate-200 p-8">
-        <h4 class="text-left">Favicons</h4>
-        <div class="grid grid-cols-3">
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/favicon/favicon.ico"
-            />
-            <p class="text-center">
-              <a href="images/favicon/favicon.ico">favicon.ico</a>
-            </p>
+        <h3 class="mb-3 mt-6 text-lg font-normal italic">
+          Data Visualization
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-1)"
+          >
+            1
           </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/favicon/hds-favicon-512x512.png"
-            />
-            <p class="text-center">
-              <a href="images/favicon/hds-favicon-512x512.png"
-                >hds-favicon-512x512.png</a
-              >
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-2)"
+          >
+            2
           </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/favicon/hds-favicon.svg"
-            />
-            <p class="text-center">
-              <a href="images/favicon/hds-favicon.svg">hds-favicon.svg</a>
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-3)"
+          >
+            3
           </div>
-        </div>
-        <h4 class="text-left">Badges with Outline</h4>
-        <div class="grid grid-cols-2">
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/badge-outlined/hds-badge-outlined-512x512.png"
-            />
-            <p class="text-center">
-              <a href="images/badge-outlined/hds-badge-outlined-512x512.png"
-                >hds-badge-outlined-512x512.png</a
-              >
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-4)"
+          >
+            4
           </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/badge-outlined/hds-badge-white-outline.svg"
-            />
-            <p class="text-center">
-              <a href="images/badge-outlined/hds-badge-white-outline.svg"
-                >hds-badge-white-outline.svg</a
-              >
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-5)"
+          >
+            5
           </div>
-        </div>
-        <h4 class="text-left">Horizontal Name</h4>
-        <div class="grid grid-cols-2">
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/horizontal/hds-logo-hz-1024x400-hz-color.png"
-            />
-            <p class="text-center">
-              <a href="images/horizontal/hds-logo-hz-1024x400-hz-color.png"
-                >hds-logo-hz-1024x400-hz-color.png</a
-              >
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-6)"
+          >
+            6
           </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/horizontal/hds-logo-hz-1024x400-white.png"
-            />
-            <p class="text-center">
-              <a href="images/horizontal/hds-logo-hz-1024x400-white.png"
-                >hds-logo-hz-1024x400-white.png</a
-              >
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-7)"
+          >
+            7
           </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/horizontal/hds-logo-hz-color.svg"
-            />
-            <p class="text-center">
-              <a href="images/horizontal/hds-logo-hz-color.svg"
-                >hds-logo-hz-color.svg</a
-              >
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-8)"
+          >
+            8
           </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/horizontal/hds-logo-hz-white.svg"
-            />
-            <p class="text-center">
-              <a href="images/horizontal/hds-logo-hz-white.svg"
-                >hds-logo-hz-white.svg</a
-              >
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-9)"
+          >
+            9
           </div>
-        </div>
-        <h4 class="text-left">Stacked Name</h4>
-        <div class="grid grid-cols-2">
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/stacked/hds-logo-stacked-500x500-color.png"
-            />
-            <p class="text-center">
-              <a href="images/stacked/hds-logo-stacked-500x500-color.png"
-                >hds-logo-stacked-500x500-color.png</a
-              >
-            </p>
-          </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/stacked/hds-logo-stacked-500x500-white.png"
-            />
-            <p class="text-center">
-              <a href="images/stacked/hds-logo-stacked-500x500-white.png"
-                >hds-logo-stacked-500x500-white.png</a
-              >
-            </p>
-          </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/stacked/hds-logo-stacked-color.svg"
-            />
-            <p class="text-center">
-              <a href="images/stacked/hds-logo-stacked-color.svg"
-                >hds-logo-stacked-color.svg</a
-              >
-            </p>
-          </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/logos/stacked/hds-logo-stacked-white.svg"
-            />
-            <p class="text-center">
-              <a href="images/stacked/hds-logo-stacked-white.svg"
-                >hds-logo-stacked-white.svg</a
-              >
-            </p>
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
+            style="background-color: var(--hds-chart-10)"
+          >
+            10
           </div>
         </div>
       </section>
 
-      <section>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
-        <article class="prose">
-          <h3 class="text-left italic">Icons</h3>
-          <p>
-            Icons come from
-            <a
-              class="font-medium text-blue-600 hover:underline dark:text-blue-500"
-              href="https://flowbite.com/icons/"
-              target="_blank"
-              >Flowbite</a
-            >
-            and are all 24px with a stroke width of 2.2
-          </p>
-        </article>
-        <div class="mt-8 grid grid-cols-4 gap-8">
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/icons/arrow-left-to-bracket.svg"
-            />
-            <p class="prose text-center">
-              <a href="./images/icons/arrow-left-to-bracket.svg"
-                >arrow-left-to-bracket.svg</a
-              >
-              <br />indicates the log out option
-            </p>
-          </div>
-          <div>
-            <img class="mx-auto h-16" src="./images/icons/badge-check.svg" />
-            <p class="prose text-center">
-              <a href="./images/icons/badge-check.svg">badge-check.svg</a>
-              <br />indicates an "active" status
-            </p>
-          </div>
-          <div>
-            <img class="mx-auto h-16" src="./images/icons/ban.svg" />
-            <p class="prose text-center">
-              <a href="./images/icons/ban.svg">ban.svg</a>
-              <br />indicates a "revoked" status
-            </p>
-          </div>
-          <div>
-            <img class="mx-auto h-16" src="./images/icons/bars-from-left.svg" />
-            <p class="prose text-center">
-              <a href="./images/icons/bars-from-left.svg">bars-from-left.svg</a>
-              <br />indicates a collapsed side menu ("hamburger icon")
-            </p>
-          </div>
-          <div>
-            <img class="mx-auto h-16" src="./images/icons/clock-arrow.svg" />
-            <p class="prose text-center">
-              <a href="./images/icons/clock-arrow.svg">clock-arrow.svg</a>
-              <br />indicates a "pending" status
-            </p>
-          </div>
-          <div>
-            <img class="mx-auto h-16" src="./images/icons/close.svg" />
-            <p class="prose text-center">
-              <a href="./images/icons/close.svg">close.svg</a>
-              <br />indicates a "refused" status
-            </p>
-          </div>
-          <div>
-            <img class="mx-auto h-16" src="./images/icons/cog-outline.svg" />
-            <p class="prose text-center">
-              <a href="./images/icons/cog-outline.svg">cog-outline.svg</a>
-              <br />Settings icon
-            </p>
-          </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/icons/file-copy-alt-solid.svg"
-            />
-            <p class="prose text-center">
-              <a href="./images/icons/file-copy-alt-solid.svg"
-                >file-copy-alt-solid.svg</a
-              >
-              <br />indicates "copy to clipboard"
-            </p>
-          </div>
-          <div>
-            <img class="mx-auto h-16" src="./images/icons/file-pen-solid.svg" />
-            <p class="prose text-center">
-              <a href="./images/icons/file-pen-solid.svg">file-pen-solid.svg</a>
-              <br />Forms section icon
-            </p>
-          </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/icons/folder-open-outline.svg"
-            />
-            <p class="prose text-center">
-              <a href="./images/icons/folder-open-outline.svg"
-                >folder-open-outline.svg</a
-              >
-              <br />indicates the option to view patient data
-            </p>
-          </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/icons/life-saver-solid.svg"
-            />
-            <p class="prose text-center">
-              <a href="./images/icons/life-saver-solid.svg"
-                >life-saver-solid.svg</a
-              >
-              <br />Help icon
-            </p>
-          </div>
-          <div>
-            <img
-              class="mx-auto h-16"
-              src="./images/icons/mail-box-outline.svg"
-            />
-            <p class="prose text-center">
-              <a href="./images/icons/mail-box-outline.svg"
-                >mail-box-outline.svg</a
-              >
-              <br />indicates "send via email"
-            </p>
-          </div>
-        </div>
-      </section>
+      <hr class="my-8 h-px border-0 bg-[var(--hds-border)]" />
 
-      <section>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
-        <article class="prose">
-          <h3 class="text-left italic">Typography</h3>
-          <p>
-            Note: We use the
-            <a
-              class="font-medium text-blue-600 hover:underline dark:text-blue-500"
-              href="https://fonts.google.com/specimen/Inter"
-              target="_blank"
-              >Inter</a
-            >
-            font.
-          </p>
-          <div class="mx-16">
+      <!-- ============================================================ -->
+      <!-- TYPOGRAPHY -->
+      <!-- ============================================================ -->
+      <section class="mb-12">
+        <h2
+          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
+        >
+          Typography
+        </h2>
+        <div
+          class="rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-8"
+        >
+          <div class="prose max-w-none">
+            <p class="mb-4 text-sm text-[var(--hds-muted-foreground)]">
+              Body: <strong>Inter</strong> (weight 300) &mdash; Headings:
+              <strong>Inter Tight</strong>
+            </p>
             <h1 class="font-sans font-light uppercase">Heading 1</h1>
             <h2 class="font-normal">Heading 2</h2>
             <h3 class="italic">Heading 3</h3>
@@ -335,275 +237,639 @@
             <p>
               This is a regular paragraph with <strong>bold</strong> and
               <em>italic</em> text, along with a
-              <a
-                class="font-medium text-blue-600 hover:underline dark:text-blue-500"
-                href="#"
-                >link</a
-              >. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              diam massa, vulputate non placerat vel, vehicula non justo. Ut
-              euismod euismod justo commodo consectetur. Pellentesque dapibus,
-              erat at fringilla dictum, mi mi lacinia tellus, eu semper est
-              lacus ac augue.
+              <a class="text-[var(--hds-primary)] hover:underline" href="#">
+                link</a
+              >. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <ul>
               <li>Unordered list item 1</li>
               <li>Unordered list item 2</li>
             </ul>
-
             <ol>
               <li>Ordered list item 1</li>
               <li>Ordered list item 2</li>
             </ol>
-
             <pre><code>This is a &lt;pre&gt;&lt;code&gt; section.</code></pre>
           </div>
-        </article>
+        </div>
       </section>
 
-      <section>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
-        <article class="m-2 prose">
-          <h3 class="italic">Card</h3>
-        </article>
-        <div class="mx-16">
+      <hr class="my-8 h-px border-0 bg-[var(--hds-border)]" />
+
+      <!-- ============================================================ -->
+      <!-- COMPONENTS -->
+      <!-- ============================================================ -->
+      <section class="mb-12">
+        <h2
+          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
+        >
+          Components
+        </h2>
+
+        <!-- Buttons -->
+        <h3 class="mb-3 text-lg font-normal italic">Buttons</h3>
+        <div class="mb-8 flex flex-wrap gap-3">
+          <button
+            class="rounded-lg bg-[var(--hds-primary)] px-5 py-2.5 text-sm font-medium text-[var(--hds-primary-foreground)] hover:opacity-90 focus:ring-4 focus:ring-[var(--hds-ring)] focus:outline-none"
+          >
+            Primary
+          </button>
+          <button
+            class="rounded-lg bg-[var(--hds-secondary)] px-5 py-2.5 text-sm font-medium text-[var(--hds-secondary-foreground)] hover:opacity-90 focus:ring-4 focus:outline-none"
+          >
+            Secondary
+          </button>
+          <button
+            class="rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] px-5 py-2.5 text-sm font-medium hover:bg-[var(--hds-muted)] focus:ring-4 focus:outline-none"
+          >
+            Outline
+          </button>
+          <button
+            class="rounded-lg bg-[var(--hds-destructive)] px-5 py-2.5 text-sm font-medium text-[var(--hds-destructive-foreground)] hover:opacity-90 focus:ring-4 focus:outline-none"
+          >
+            Destructive
+          </button>
+          <button
+            class="cursor-not-allowed rounded-lg bg-[var(--hds-muted)] px-5 py-2.5 text-sm font-medium text-[var(--hds-muted-foreground)] opacity-60"
+            disabled
+          >
+            Disabled
+          </button>
+        </div>
+
+        <!-- Card -->
+        <h3 class="mb-3 text-lg font-normal italic">Card</h3>
+        <div class="mb-8 flex flex-wrap gap-4">
           <div
-            class="m-2 w-full max-w-sm rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-8 dark:border-gray-700 dark:bg-gray-800"
+            class="w-full max-w-sm rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4 shadow-sm sm:p-6"
           >
             <h5
-              class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400"
+              class="mb-2 text-xl font-medium text-[var(--hds-muted-foreground)]"
             >
-              Label
+              Card Title
             </h5>
-            <div class="flex items-baseline text-gray-900 dark:text-white">
-              <span class="text-3xl font-bold tracking-tight">Value</span>
-            </div>
-          </div>
-        </div>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
-
-        <article class="m-2 prose">
-          <h3 class="italic">Form</h3>
-        </article>
-        <div class="mx-16">
-          <div class="m-4 prose ml-8">
-            <h1 class="font-sans font-light uppercase">Form Title</h1>
-            <h2 class="font-normal">Description</h2>
-            <p>Description of the form.</p>
-            <h2 class="font-normal">Consent</h2>
-            <p>Consent information.</p>
-          </div>
-        </div>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
-
-        <article class="m-2 prose">
-          <h3 class="italic">Input</h3>
-        </article>
-        <form>
-          <label
-            class="sr-only mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            for="search"
-          >
-            Helpful placeholder text
-          </label>
-          <div class="relative w-1/2">
-            <input
-              class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 ps-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-              id="search"
-              placeholder="Helpful placeholder text"
-              required
-              type="search"
-            />
+            <p class="mb-4 text-sm">
+              Card content with some description text.
+            </p>
             <button
-              class="absolute end-2.5 bottom-2.5 rounded-lg bg-blue-700 px-4 py-2 text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              type="submit"
+              class="rounded-lg bg-[var(--hds-primary)] px-4 py-2 text-sm font-medium text-[var(--hds-primary-foreground)] hover:opacity-90"
             >
-              Submit
+              Action
             </button>
           </div>
-        </form>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
+        </div>
 
-        <article class="m-2 prose">
-          <h3 class="italic">Sidebar</h3>
-        </article>
-        <div class="mx-16">
-          <div class="max-w-64">
-            <a href="#">
-              <img
-                alt="Logo"
-                class="mx-2"
-                src="./images/logos/horizontal/hds-logo-hz-1024x400-hz-color.png"
-                width="200px"
-              />
-            </a>
-            <div
-              class="h-full overflow-y-auto bg-gray-50 px-3 py-4 dark:bg-gray-800"
+        <!-- Form / Input -->
+        <h3 class="mb-3 text-lg font-normal italic">Form Inputs</h3>
+        <div class="mb-8 max-w-lg space-y-4">
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium"
+              for="input-text"
             >
-              <ul class="space-y-2 font-medium">
-                <li>
-                  <div
-                    class="group flex items-center rounded-lg p-2 text-gray-900 dark:text-white"
-                  >
-                    <img src="./images/icons/file-pen-solid.svg" />
-                    <span class="ms-3 flex-1 whitespace-nowrap">Forms</span>
-                  </div>
-                </li>
-                <li>
-                  <a
-                    class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    href="#"
-                    >Form 1</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    href="#"
-                    >Form 2</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    href="#"
-                    >Form 3</a
-                  >
-                </li>
-              </ul>
-              <ul
-                class="mt-4 space-y-2 border-t border-gray-200 pt-4 font-medium dark:border-gray-700"
-              >
-                <li>
-                  <a
-                    class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    href="https://www.healthdatasafe.org/"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <img src="./images/icons/life-saver-solid.svg" />
-                    <span class="ms-3 flex-1 whitespace-nowrap">Help</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="group flex items-center rounded-lg p-2 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    href="#"
-                  >
-                    <img src="./images/icons/arrow-left-to-bracket.svg" />
-                    <span class="ms-3 flex-1 whitespace-nowrap"
-                      >username: Log Out</span
-                    >
-                  </a>
-                </li>
-              </ul>
-            </div>
+              Text Input
+            </label>
+            <input
+              class="block w-full rounded-lg border border-[var(--hds-input)] bg-[var(--hds-card)] p-2.5 text-sm focus:border-[var(--hds-ring)] focus:ring-[var(--hds-ring)]"
+              id="input-text"
+              placeholder="Placeholder text"
+              type="text"
+            />
+          </div>
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium"
+              for="input-select"
+            >
+              Select
+            </label>
+            <select
+              class="block w-full rounded-lg border border-[var(--hds-input)] bg-[var(--hds-card)] p-2.5 text-sm focus:border-[var(--hds-ring)] focus:ring-[var(--hds-ring)]"
+              id="input-select"
+            >
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="flex items-center gap-2">
+            <input
+              class="h-4 w-4 rounded border-[var(--hds-input)] accent-[var(--hds-primary)]"
+              id="input-check"
+              type="checkbox"
+            />
+            <label class="text-sm font-medium" for="input-check">
+              Checkbox label
+            </label>
           </div>
         </div>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
 
-        <article class="m-2 prose">
-          <h3 class="italic">Tab bar</h3>
-        </article>
-        <div class="mx-16">
+        <!-- Table -->
+        <h3 class="mb-3 text-lg font-normal italic">Table</h3>
+        <div class="mb-8 overflow-x-auto rounded-lg shadow-sm">
+          <table class="w-full text-left text-sm">
+            <thead
+              class="bg-[var(--hds-muted)] text-xs uppercase text-[var(--hds-muted-foreground)]"
+            >
+              <tr>
+                <th class="px-6 py-3" scope="col">Name</th>
+                <th class="px-6 py-3" scope="col">Status</th>
+                <th class="px-6 py-3" scope="col">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="border-b border-[var(--hds-border)] bg-[var(--hds-card)] hover:bg-[var(--hds-muted)]"
+              >
+                <th class="px-6 py-4 font-medium whitespace-nowrap" scope="row">
+                  Dr. Smith
+                </th>
+                <td class="px-6 py-4">
+                  <span
+                    class="rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800"
+                    >Active</span
+                  >
+                </td>
+                <td class="px-6 py-4">Physician</td>
+              </tr>
+              <tr
+                class="border-b border-[var(--hds-border)] bg-[var(--hds-card)] hover:bg-[var(--hds-muted)]"
+              >
+                <th class="px-6 py-4 font-medium whitespace-nowrap" scope="row">
+                  Dr. Johnson
+                </th>
+                <td class="px-6 py-4">
+                  <span
+                    class="rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800"
+                    >Pending</span
+                  >
+                </td>
+                <td class="px-6 py-4">Researcher</td>
+              </tr>
+              <tr
+                class="bg-[var(--hds-card)] hover:bg-[var(--hds-muted)]"
+              >
+                <th class="px-6 py-4 font-medium whitespace-nowrap" scope="row">
+                  Dr. Williams
+                </th>
+                <td class="px-6 py-4">
+                  <span
+                    class="rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800"
+                    >Revoked</span
+                  >
+                </td>
+                <td class="px-6 py-4">Specialist</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tabs -->
+        <h3 class="mb-3 text-lg font-normal italic">Tabs</h3>
+        <div class="mb-8">
           <ul
-            class="flex flex-wrap border-b border-gray-200 text-center text-sm font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
+            class="flex flex-wrap border-b border-[var(--hds-border)] text-center text-sm font-medium text-[var(--hds-muted-foreground)]"
           >
             <li class="me-2">
               <a
                 aria-current="page"
-                class="active inline-block rounded-t-lg bg-gray-100 p-4 text-blue-600 dark:bg-gray-800 dark:text-blue-500"
+                class="active inline-block rounded-t-lg bg-[var(--hds-muted)] p-4 text-[var(--hds-primary)]"
                 href="#"
                 >Tab 1</a
               >
             </li>
             <li class="me-2">
               <a
-                class="inline-block rounded-t-lg p-4 hover:bg-gray-50 hover:text-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                class="inline-block rounded-t-lg p-4 hover:bg-[var(--hds-muted)]"
                 href="#"
                 >Tab 2</a
               >
             </li>
             <li class="me-2">
               <a
-                class="inline-block rounded-t-lg p-4 hover:bg-gray-50 hover:text-gray-600 dark:hover:bg-gray-800 dark:hover:text-gray-300"
+                class="inline-block rounded-t-lg p-4 hover:bg-[var(--hds-muted)]"
                 href="#"
                 >Tab 3</a
               >
             </li>
           </ul>
         </div>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
 
-        <article class="m-2 prose">
-          <h3 class="italic">Table</h3>
-        </article>
-        <div class="mx-16">
-          <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-              <table
-                class="w-full text-left text-sm text-gray-500 rtl:text-right dark:text-gray-400"
-              >
-                <thead
-                  class="bg-gray-50 text-xs text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400"
+        <!-- Sidebar -->
+        <h3 class="mb-3 text-lg font-normal italic">Sidebar</h3>
+        <div class="mb-8 max-w-64">
+          <a href="#">
+            <img
+              alt="Logo"
+              class="mx-2 mb-2"
+              src="./images/logos/horizontal/hds-logo-hz-1024x400-hz-color.png"
+              width="200px"
+            />
+          </a>
+          <div
+            class="overflow-y-auto rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] px-3 py-4"
+          >
+            <ul class="space-y-2 font-medium">
+              <li>
+                <div
+                  class="group flex items-center rounded-lg bg-[var(--hds-muted)] p-2"
                 >
-                  <tr>
-                    <th class="px-6 py-3" scope="col">
-                      <div class="flex items-center">Column 1</div>
-                    </th>
-                    <th class="px-6 py-3" scope="col">
-                      <div class="flex items-center">Column 2</div>
-                    </th>
-                    <th class="px-6 py-3" scope="col">
-                      <div class="flex items-center">Column 3</div>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    class="border-b border-gray-200 bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
-                  >
-                    <th
-                      class="px-6 py-4 font-medium whitespace-nowrap text-gray-900 dark:text-white"
-                      scope="row"
-                    >
-                      Row 1
-                    </th>
-                    <td class="px-6 py-4">R1C2</td>
-                    <td class="px-6 py-4">R1C3</td>
-                  </tr>
-                  <tr
-                    class="border-b border-gray-200 bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
-                  >
-                    <th
-                      class="px-6 py-4 font-medium whitespace-nowrap text-gray-900 dark:text-white"
-                      scope="row"
-                    >
-                      Row 2
-                    </th>
-                    <td class="px-6 py-4">R2C2</td>
-                    <td class="px-6 py-4">R2C3</td>
-                  </tr>
-                  <tr
-                    class="border-b border-gray-200 bg-white hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-600"
-                  >
-                    <th
-                      class="px-6 py-4 font-medium whitespace-nowrap text-gray-900 dark:text-white"
-                      scope="row"
-                    >
-                      Row 3
-                    </th>
-                    <td class="px-6 py-4">R3C2</td>
-                    <td class="px-6 py-4">R3C3</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                  <img class="h-5 w-5" src="./images/icons/file-pen-solid.svg" />
+                  <span class="ms-3 flex-1 whitespace-nowrap">Forms</span>
+                </div>
+              </li>
+              <li>
+                <a
+                  class="group flex items-center rounded-lg p-2 hover:bg-[var(--hds-muted)]"
+                  href="#"
+                  >Form 1</a
+                >
+              </li>
+              <li>
+                <a
+                  class="group flex items-center rounded-lg p-2 hover:bg-[var(--hds-muted)]"
+                  href="#"
+                  >Form 2</a
+                >
+              </li>
+            </ul>
+            <ul
+              class="mt-4 space-y-2 border-t border-[var(--hds-border)] pt-4 font-medium"
+            >
+              <li>
+                <a
+                  class="group flex items-center rounded-lg p-2 hover:bg-[var(--hds-muted)]"
+                  href="#"
+                >
+                  <img class="h-5 w-5" src="./images/icons/life-saver-solid.svg" />
+                  <span class="ms-3 flex-1 whitespace-nowrap">Help</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="group flex items-center rounded-lg p-2 hover:bg-[var(--hds-muted)]"
+                  href="#"
+                >
+                  <img
+                    class="h-5 w-5"
+                    src="./images/icons/arrow-left-to-bracket.svg"
+                  />
+                  <span class="ms-3 flex-1 whitespace-nowrap">Log Out</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <hr class="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700" />
+
+        <!-- Alert / Badge -->
+        <h3 class="mb-3 text-lg font-normal italic">Badges</h3>
+        <div class="mb-8 flex flex-wrap gap-2">
+          <span
+            class="rounded-full bg-[var(--hds-primary)] px-3 py-1 text-xs font-medium text-[var(--hds-primary-foreground)]"
+            >Primary</span
+          >
+          <span
+            class="rounded-full bg-[var(--hds-secondary)] px-3 py-1 text-xs font-medium text-[var(--hds-secondary-foreground)]"
+            >Secondary</span
+          >
+          <span
+            class="rounded-full bg-[var(--hds-destructive)] px-3 py-1 text-xs font-medium text-[var(--hds-destructive-foreground)]"
+            >Destructive</span
+          >
+          <span
+            class="rounded-full bg-[var(--hds-muted)] px-3 py-1 text-xs font-medium text-[var(--hds-muted-foreground)]"
+            >Muted</span
+          >
+        </div>
+      </section>
+
+      <hr class="my-8 h-px border-0 bg-[var(--hds-border)]" />
+
+      <!-- ============================================================ -->
+      <!-- ICONS -->
+      <!-- ============================================================ -->
+      <section class="mb-12">
+        <h2
+          class="mb-2 font-sans text-2xl font-light uppercase tracking-wide"
+        >
+          Icons
+        </h2>
+        <p class="mb-6 text-sm text-[var(--hds-muted-foreground)]">
+          From
+          <a
+            class="text-[var(--hds-primary)] hover:underline"
+            href="https://flowbite.com/icons/"
+            target="_blank"
+            >Flowbite</a
+          >
+          &mdash; 24px, stroke width 2.2. Click a URL to copy.
+        </p>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/arrow-left-to-bracket.svg" />
+            <span class="text-xs font-medium">arrow-left-to-bracket</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/arrow-left-to-bracket.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/badge-check.svg" />
+            <span class="text-xs font-medium">badge-check</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/badge-check.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/ban.svg" />
+            <span class="text-xs font-medium">ban</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/ban.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/bars-from-left.svg" />
+            <span class="text-xs font-medium">bars-from-left</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/bars-from-left.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/clock-arrow.svg" />
+            <span class="text-xs font-medium">clock-arrow</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/clock-arrow.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/close.svg" />
+            <span class="text-xs font-medium">close</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/close.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/cog-outline.svg" />
+            <span class="text-xs font-medium">cog-outline</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/cog-outline.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/file-copy-alt-solid.svg" />
+            <span class="text-xs font-medium">file-copy-alt-solid</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/file-copy-alt-solid.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/file-pen-solid.svg" />
+            <span class="text-xs font-medium">file-pen-solid</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/file-pen-solid.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/folder-open-outline.svg" />
+            <span class="text-xs font-medium">folder-open-outline</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/folder-open-outline.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/life-saver-solid.svg" />
+            <span class="text-xs font-medium">life-saver-solid</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/life-saver-solid.svg</code
+            >
+          </div>
+          <div
+            class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
+          >
+            <img class="h-10 w-10" src="./images/icons/mail-box-outline.svg" />
+            <span class="text-xs font-medium">mail-box-outline</span>
+            <code
+              class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
+              onclick="navigator.clipboard.writeText(this.textContent)"
+              >images/icons/mail-box-outline.svg</code
+            >
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-8 h-px border-0 bg-[var(--hds-border)]" />
+
+      <!-- ============================================================ -->
+      <!-- LOGOS -->
+      <!-- ============================================================ -->
+      <section class="mb-12">
+        <h2
+          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
+        >
+          Logos
+        </h2>
+
+        <h3 class="mb-3 text-lg font-normal italic">Favicons</h3>
+        <div
+          class="mb-6 grid grid-cols-3 gap-4 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-6"
+        >
+          <div class="text-center">
+            <img class="mx-auto h-16" src="./images/logos/favicon/favicon.ico" />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px]"
+              onclick="navigator.clipboard.writeText('images/logos/favicon/favicon.ico')"
+              >favicon.ico</code
+            >
+          </div>
+          <div class="text-center">
+            <img
+              class="mx-auto h-16"
+              src="./images/logos/favicon/hds-favicon-512x512.png"
+            />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px]"
+              onclick="navigator.clipboard.writeText('images/logos/favicon/hds-favicon-512x512.png')"
+              >hds-favicon-512x512.png</code
+            >
+          </div>
+          <div class="text-center">
+            <img class="mx-auto h-16" src="./images/logos/favicon/hds-favicon.svg" />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px]"
+              onclick="navigator.clipboard.writeText('images/logos/favicon/hds-favicon.svg')"
+              >hds-favicon.svg</code
+            >
+          </div>
+        </div>
+
+        <h3 class="mb-3 text-lg font-normal italic">Horizontal</h3>
+        <div
+          class="mb-6 grid grid-cols-2 gap-4 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-6"
+        >
+          <div class="text-center">
+            <img
+              class="mx-auto h-12"
+              src="./images/logos/horizontal/hds-logo-hz-color.svg"
+            />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px]"
+              onclick="navigator.clipboard.writeText('images/logos/horizontal/hds-logo-hz-color.svg')"
+              >hds-logo-hz-color.svg</code
+            >
+          </div>
+          <div class="rounded-lg bg-gray-800 p-4 text-center">
+            <img
+              class="mx-auto h-12"
+              src="./images/logos/horizontal/hds-logo-hz-white.svg"
+            />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-gray-700 px-1.5 py-0.5 text-[10px] text-gray-300"
+              onclick="navigator.clipboard.writeText('images/logos/horizontal/hds-logo-hz-white.svg')"
+              >hds-logo-hz-white.svg</code
+            >
+          </div>
+        </div>
+
+        <h3 class="mb-3 text-lg font-normal italic">Stacked</h3>
+        <div
+          class="mb-6 grid grid-cols-2 gap-4 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-6"
+        >
+          <div class="text-center">
+            <img
+              class="mx-auto h-24"
+              src="./images/logos/stacked/hds-logo-stacked-color.svg"
+            />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px]"
+              onclick="navigator.clipboard.writeText('images/logos/stacked/hds-logo-stacked-color.svg')"
+              >hds-logo-stacked-color.svg</code
+            >
+          </div>
+          <div class="rounded-lg bg-gray-800 p-4 text-center">
+            <img
+              class="mx-auto h-24"
+              src="./images/logos/stacked/hds-logo-stacked-white.svg"
+            />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-gray-700 px-1.5 py-0.5 text-[10px] text-gray-300"
+              onclick="navigator.clipboard.writeText('images/logos/stacked/hds-logo-stacked-white.svg')"
+              >hds-logo-stacked-white.svg</code
+            >
+          </div>
+        </div>
+
+        <h3 class="mb-3 text-lg font-normal italic">Badge Outlined</h3>
+        <div
+          class="mb-6 grid grid-cols-2 gap-4 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-6"
+        >
+          <div class="text-center">
+            <img
+              class="mx-auto h-16"
+              src="./images/logos/badge-outlined/hds-badge-outlined-512x512.png"
+            />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px]"
+              onclick="navigator.clipboard.writeText('images/logos/badge-outlined/hds-badge-outlined-512x512.png')"
+              >hds-badge-outlined-512x512.png</code
+            >
+          </div>
+          <div class="rounded-lg bg-gray-800 p-4 text-center">
+            <img
+              class="mx-auto h-16"
+              src="./images/logos/badge-outlined/hds-badge-white-outline.svg"
+            />
+            <code
+              class="mt-2 inline-block cursor-pointer rounded bg-gray-700 px-1.5 py-0.5 text-[10px] text-gray-300"
+              onclick="navigator.clipboard.writeText('images/logos/badge-outlined/hds-badge-white-outline.svg')"
+              >hds-badge-white-outline.svg</code
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ -->
+      <!-- USAGE -->
+      <!-- ============================================================ -->
+      <section class="mb-12">
+        <h2
+          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
+        >
+          Usage
+        </h2>
+        <div
+          class="rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-6"
+        >
+          <div class="prose max-w-none">
+            <h4>Install the style package</h4>
+            <pre><code>npm install git+https://github.com/healthdatasafe/style-package.git</code></pre>
+
+            <h4>Import in your CSS</h4>
+            <pre><code>@import "tailwindcss";
+@import "hds-style/css/theme.css";
+@import "hds-style/css/palettes.css";</code></pre>
+
+            <h4>Apply a palette</h4>
+            <pre><code>&lt;html class="palette-doctor"&gt;  &lt;!-- or palette-patient, palette-dark --&gt;</code></pre>
+
+            <h4>Reference images from CDN</h4>
+            <pre><code>&lt;link rel="icon" href="https://style.datasafe.dev/images/logos/favicon/favicon.ico"&gt;
+&lt;img src="https://style.datasafe.dev/images/icons/badge-check.svg"&gt;</code></pre>
+          </div>
+        </div>
       </section>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!-- Palette switcher script -->
+    <script>
+      document.getElementById("palette-switcher").addEventListener("click", function (e) {
+        const btn = e.target.closest("[data-palette]");
+        if (!btn) return;
+        const html = document.documentElement;
+        html.className = btn.dataset.palette;
+      });
+    </script>
   </body>
 </html>

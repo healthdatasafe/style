@@ -1,7 +1,7 @@
 {
-  "name": "hds-style",
-  "version": "0.0.1",
-  "description": "HDS Reference CSS, JS and media files.",
+  "name": "hds-style-showcase",
+  "version": "0.0.2",
+  "description": "HDS style showcase, icons, and logos. Published at style.datasafe.dev.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -23,6 +23,9 @@
     "format:fix": "npx prettier . --write",
     "minify": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/hds.min.css --minify",
     "serve": "npx livereload ./src"
+  },
+  "dependencies": {
+    "hds-style": "file:../style-package"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.11",
