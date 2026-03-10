@@ -475,6 +475,53 @@
           </table>
         </div>
 
+        <!-- Connection List (Patient app pattern) -->
+        <h3 class="mb-3 text-lg font-normal italic">Connection List</h3>
+        <div class="mb-8 max-w-sm">
+          <div class="rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] overflow-hidden">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-[var(--hds-border)] px-4 py-3">
+              <h4 class="text-lg font-bold">Connections</h4>
+              <button class="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--hds-primary)] text-[var(--hds-primary-foreground)]">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+              </button>
+            </div>
+            <!-- Search -->
+            <div class="border-b border-[var(--hds-border)] px-4 py-3">
+              <div class="flex items-center gap-2 rounded-md bg-[var(--hds-secondary)]/30 px-3 py-2">
+                <svg class="h-4 w-4 text-[var(--hds-muted-foreground)]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
+                <span class="text-sm text-[var(--hds-muted-foreground)]">Search connections...</span>
+              </div>
+            </div>
+            <!-- Items -->
+            <div>
+              <div class="flex items-center gap-3 border-b border-[var(--hds-border)] px-4 py-3 hover:bg-[var(--hds-secondary)]/50 cursor-pointer bg-[var(--hds-secondary)]">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium">DR</div>
+                <div class="flex-1 overflow-hidden">
+                  <div class="text-sm font-medium">Dr. Roberts</div>
+                  <div class="truncate text-xs text-[var(--hds-muted-foreground)]">Your next appointment is confirmed</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 border-b border-[var(--hds-border)] px-4 py-3 hover:bg-[var(--hds-secondary)]/50 cursor-pointer">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium">CS</div>
+                <div class="flex-1 overflow-hidden">
+                  <div class="text-sm font-medium">Clinical Study UNIL</div>
+                  <div>
+                    <span class="text-xs font-medium rounded bg-amber-100 text-amber-700 px-1.5 py-0.5">Action required</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 px-4 py-3 hover:bg-[var(--hds-secondary)]/50 cursor-pointer">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium">PH</div>
+                <div class="flex-1 overflow-hidden">
+                  <div class="text-sm font-medium">Pharmacy Central</div>
+                  <div class="truncate text-xs text-[var(--hds-muted-foreground)]">Prescription renewed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Tabs -->
         <h3 class="mb-3 text-lg font-normal italic">Tabs</h3>
         <div class="mb-8">
