@@ -25,8 +25,12 @@
         <div class="flex items-center gap-3">
           <img
             alt="HDS"
-            class="h-8"
+            class="h-8 logo-color"
             src="./images/logos/horizontal/hds-logo-hz-color.svg"
+          /><img
+            alt="HDS"
+            class="h-8 logo-white hidden"
+            src="./images/logos/horizontal/hds-logo-hz-white.svg"
           />
           <span class="text-lg font-medium">Style Guide</span>
         </div>
@@ -559,8 +563,13 @@
           <a href="#">
             <img
               alt="Logo"
-              class="mx-2 mb-2"
+              class="mx-2 mb-2 logo-color"
               src="./images/logos/horizontal/hds-logo-hz-1024x400-hz-color.png"
+              width="200px"
+            /><img
+              alt="Logo"
+              class="mx-2 mb-2 logo-white hidden"
+              src="./images/logos/horizontal/hds-logo-hz-white.svg"
               width="200px"
             />
           </a>
@@ -967,6 +976,9 @@
         if (!btn) return;
         const html = document.documentElement;
         html.className = btn.dataset.palette;
+        const isDark = btn.dataset.palette === "palette-dark";
+        document.querySelectorAll(".logo-color").forEach(el => el.classList.toggle("hidden", isDark));
+        document.querySelectorAll(".logo-white").forEach(el => el.classList.toggle("hidden", !isDark));
       });
     </script>
   </body>
