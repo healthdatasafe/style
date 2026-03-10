@@ -83,11 +83,13 @@ tr:hover {
 code {
   font-family: var(--font-mono, ui-monospace, monospace);
   font-size: 0.875em;
+  color: var(--hds-foreground, #111928);
   background-color: var(--hds-muted, #f3f4f6);
   padding: 0.15em 0.4em;
   border-radius: 0.25em;
 }
 pre {
+  color: var(--hds-foreground, #111928);
   background-color: var(--hds-muted, #f3f4f6);
   padding: 1em;
   border-radius: 0.5em;
