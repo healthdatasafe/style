@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Added
+- CI: GitHub Actions workflow (`.github/workflows/ci.yml`) running the build on pull requests and pushes to `main` (2026-10-08).
+- The `copy` script creates `dist/` when it is missing, so the build works from a fresh clone; `package.json` version
+  aligned with the CHANGELOG (0.0.2 → 0.3.0).
+
 ## [0.3.0] - 2026-03-10
 
 ### Added

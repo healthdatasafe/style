@@ -1,6 +1,6 @@
 {
   "name": "hds-style-showcase",
-  "version": "0.0.2",
+  "version": "0.3.0",
   "description": "HDS style showcase, icons, and logos. Published at style.datasafe.dev.",
   "main": "index.js",
   "repository": {
@@ -18,7 +18,7 @@
     "build": "npm run copy && npm run minify",
     "setup": "sh scripts/setup.sh",
     "deploy": "bash scripts/deploy.sh",
-    "copy": "rm -rf dist/* && cp -R src/* dist/ && rm dist/input.css",
+    "copy": "mkdir -p dist && rm -rf dist/* && cp -R src/* dist/ && rm dist/input.css",
     "css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/hds.css --watch",
     "dev": "npx concurrently --kill-others \"npm run css\" \"npm run serve\"",
     "format": "npx prettier . --check",
