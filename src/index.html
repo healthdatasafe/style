@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="palette-doctor">
+<html class="palette-doctor" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -8,7 +8,10 @@
       rel="icon"
       type="image/x-icon"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="./hds.css" rel="stylesheet" />
     <title>HDS Style Guide</title>
   </head>
@@ -25,11 +28,11 @@
         <div class="flex items-center gap-3">
           <img
             alt="HDS"
-            class="h-8 logo-color"
+            class="logo-color h-8"
             src="./images/logos/horizontal/hds-logo-hz-color.svg"
           /><img
             alt="HDS"
-            class="h-8 logo-white hidden"
+            class="logo-white hidden h-8"
             src="./images/logos/horizontal/hds-logo-hz-white.svg"
           />
           <span class="text-lg font-medium">Style Guide</span>
@@ -80,16 +83,14 @@
       <!-- COLOR SWATCHES -->
       <!-- ============================================================ -->
       <section class="mb-12">
-        <h2
-          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
-        >
+        <h2 class="mb-6 font-sans text-2xl font-light tracking-wide uppercase">
           Color Palette
         </h2>
-        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        <div
+          class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+        >
           <div>
-            <div
-              class="h-16 rounded-t-lg bg-[var(--hds-primary)]"
-            ></div>
+            <div class="h-16 rounded-t-lg bg-[var(--hds-primary)]"></div>
             <div
               class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
             >
@@ -97,9 +98,7 @@
             </div>
           </div>
           <div>
-            <div
-              class="h-16 rounded-t-lg bg-[var(--hds-secondary)]"
-            ></div>
+            <div class="h-16 rounded-t-lg bg-[var(--hds-secondary)]"></div>
             <div
               class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
             >
@@ -107,9 +106,7 @@
             </div>
           </div>
           <div>
-            <div
-              class="h-16 rounded-t-lg bg-[var(--hds-accent)]"
-            ></div>
+            <div class="h-16 rounded-t-lg bg-[var(--hds-accent)]"></div>
             <div
               class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
             >
@@ -117,9 +114,7 @@
             </div>
           </div>
           <div>
-            <div
-              class="h-16 rounded-t-lg bg-[var(--hds-muted)]"
-            ></div>
+            <div class="h-16 rounded-t-lg bg-[var(--hds-muted)]"></div>
             <div
               class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
             >
@@ -127,9 +122,7 @@
             </div>
           </div>
           <div>
-            <div
-              class="h-16 rounded-t-lg bg-[var(--hds-destructive)]"
-            ></div>
+            <div class="h-16 rounded-t-lg bg-[var(--hds-destructive)]"></div>
             <div
               class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
             >
@@ -138,7 +131,7 @@
           </div>
           <div>
             <div
-              class="h-16 rounded-t-lg bg-[var(--hds-background)] border border-[var(--hds-border)]"
+              class="h-16 rounded-t-lg border border-[var(--hds-border)] bg-[var(--hds-background)]"
             ></div>
             <div
               class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
@@ -148,59 +141,101 @@
           </div>
         </div>
 
-        <h3 class="mb-3 mt-6 text-lg font-normal italic">
+        <h3 class="mt-6 mb-3 text-lg font-normal italic">
           Primary Scale (Tailwind <code>primary-*</code>)
         </h3>
-        <div class="flex gap-1 mb-6">
+        <div class="mb-6 flex gap-1">
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-50"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">50</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              50
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-100"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">100</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              100
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-200"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">200</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              200
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-300"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">300</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              300
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-400"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">400</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              400
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-500"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg font-bold">500</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px] font-bold"
+            >
+              500
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-600"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">600</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              600
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-700"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">700</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              700
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-800"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">800</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              800
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-900"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">900</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              900
+            </div>
           </div>
           <div class="flex-1">
             <div class="h-12 rounded-t-lg bg-primary-950"></div>
-            <div class="border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-[10px] text-center rounded-b-lg">950</div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-1 py-0.5 text-center text-[10px]"
+            >
+              950
+            </div>
           </div>
         </div>
 
-        <h3 class="mb-3 mt-6 text-lg font-normal italic">
-          Data Visualization
-        </h3>
+        <h3 class="mt-6 mb-3 text-lg font-normal italic">Data Visualization</h3>
         <div class="flex flex-wrap gap-2">
           <div
             class="flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-white"
@@ -271,9 +306,7 @@
       <!-- TYPOGRAPHY -->
       <!-- ============================================================ -->
       <section class="mb-12">
-        <h2
-          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
-        >
+        <h2 class="mb-6 font-sans text-2xl font-light tracking-wide uppercase">
           Typography
         </h2>
         <div
@@ -315,9 +348,7 @@
       <!-- COMPONENTS -->
       <!-- ============================================================ -->
       <section class="mb-12">
-        <h2
-          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
-        >
+        <h2 class="mb-6 font-sans text-2xl font-light tracking-wide uppercase">
           Components
         </h2>
 
@@ -363,9 +394,7 @@
             >
               Card Title
             </h5>
-            <p class="mb-4 text-sm">
-              Card content with some description text.
-            </p>
+            <p class="mb-4 text-sm">Card content with some description text.</p>
             <button
               class="rounded-lg bg-[var(--hds-primary)] px-4 py-2 text-sm font-medium text-[var(--hds-primary-foreground)] hover:opacity-90"
             >
@@ -378,10 +407,7 @@
         <h3 class="mb-3 text-lg font-normal italic">Form Inputs</h3>
         <div class="mb-8 max-w-lg space-y-4">
           <div>
-            <label
-              class="mb-2 block text-sm font-medium"
-              for="input-text"
-            >
+            <label class="mb-2 block text-sm font-medium" for="input-text">
               Text Input
             </label>
             <input
@@ -392,10 +418,7 @@
             />
           </div>
           <div>
-            <label
-              class="mb-2 block text-sm font-medium"
-              for="input-select"
-            >
+            <label class="mb-2 block text-sm font-medium" for="input-select">
               Select
             </label>
             <select
@@ -424,7 +447,7 @@
         <div class="mb-8 overflow-x-auto rounded-lg shadow-sm">
           <table class="w-full text-left text-sm">
             <thead
-              class="bg-[var(--hds-muted)] text-xs uppercase text-[var(--hds-muted-foreground)]"
+              class="bg-[var(--hds-muted)] text-xs text-[var(--hds-muted-foreground)] uppercase"
             >
               <tr>
                 <th class="px-6 py-3" scope="col">Name</th>
@@ -461,9 +484,7 @@
                 </td>
                 <td class="px-6 py-4">Researcher</td>
               </tr>
-              <tr
-                class="bg-[var(--hds-card)] hover:bg-[var(--hds-muted)]"
-              >
+              <tr class="bg-[var(--hds-card)] hover:bg-[var(--hds-muted)]">
                 <th class="px-6 py-4 font-medium whitespace-nowrap" scope="row">
                   Dr. Williams
                 </th>
@@ -482,44 +503,105 @@
         <!-- Connection List (Patient app pattern) -->
         <h3 class="mb-3 text-lg font-normal italic">Connection List</h3>
         <div class="mb-8 max-w-sm">
-          <div class="rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] overflow-hidden">
+          <div
+            class="overflow-hidden rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)]"
+          >
             <!-- Header -->
-            <div class="flex items-center justify-between border-b border-[var(--hds-border)] px-4 py-3">
+            <div
+              class="flex items-center justify-between border-b border-[var(--hds-border)] px-4 py-3"
+            >
               <h4 class="text-lg font-bold">Connections</h4>
-              <button class="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--hds-primary)] text-[var(--hds-primary-foreground)]">
-                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+              <button
+                class="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--hds-primary)] text-[var(--hds-primary-foreground)]"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <line x1="12" x2="12" y1="5" y2="19" />
+                  <line x1="5" x2="19" y1="12" y2="12" />
+                </svg>
               </button>
             </div>
             <!-- Search -->
             <div class="border-b border-[var(--hds-border)] px-4 py-3">
-              <div class="flex items-center gap-2 rounded-md bg-[var(--hds-secondary)]/30 px-3 py-2">
-                <svg class="h-4 w-4 text-[var(--hds-muted-foreground)]" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
-                <span class="text-sm text-[var(--hds-muted-foreground)]">Search connections...</span>
+              <div
+                class="flex items-center gap-2 rounded-md bg-[var(--hds-secondary)]/30 px-3 py-2"
+              >
+                <svg
+                  class="h-4 w-4 text-[var(--hds-muted-foreground)]"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" x2="16.65" y1="21" y2="16.65" />
+                </svg>
+                <span class="text-sm text-[var(--hds-muted-foreground)]"
+                  >Search connections...</span
+                >
               </div>
             </div>
             <!-- Items -->
             <div>
-              <div class="flex items-center gap-3 border-b border-[var(--hds-border)] px-4 py-3 hover:bg-[var(--hds-secondary)]/50 cursor-pointer bg-[var(--hds-secondary)]">
-                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium">DR</div>
+              <div
+                class="flex cursor-pointer items-center gap-3 border-b border-[var(--hds-border)] bg-[var(--hds-secondary)] px-4 py-3 hover:bg-[var(--hds-secondary)]/50"
+              >
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium"
+                >
+                  DR
+                </div>
                 <div class="flex-1 overflow-hidden">
                   <div class="text-sm font-medium">Dr. Roberts</div>
-                  <div class="truncate text-xs text-[var(--hds-muted-foreground)]">Your next appointment is confirmed</div>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 border-b border-[var(--hds-border)] px-4 py-3 hover:bg-[var(--hds-secondary)]/50 cursor-pointer">
-                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium">CS</div>
-                <div class="flex-1 overflow-hidden">
-                  <div class="text-sm font-medium">Clinical Study UNIL</div>
-                  <div>
-                    <span class="text-xs font-medium rounded bg-amber-100 text-amber-700 px-1.5 py-0.5">Action required</span>
+                  <div
+                    class="truncate text-xs text-[var(--hds-muted-foreground)]"
+                  >
+                    Your next appointment is confirmed
                   </div>
                 </div>
               </div>
-              <div class="flex items-center gap-3 px-4 py-3 hover:bg-[var(--hds-secondary)]/50 cursor-pointer">
-                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium">PH</div>
+              <div
+                class="flex cursor-pointer items-center gap-3 border-b border-[var(--hds-border)] px-4 py-3 hover:bg-[var(--hds-secondary)]/50"
+              >
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium"
+                >
+                  CS
+                </div>
+                <div class="flex-1 overflow-hidden">
+                  <div class="text-sm font-medium">Clinical Study UNIL</div>
+                  <div>
+                    <span
+                      class="rounded bg-amber-100 px-1.5 py-0.5 text-xs font-medium text-amber-700"
+                      >Action required</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex cursor-pointer items-center gap-3 px-4 py-3 hover:bg-[var(--hds-secondary)]/50"
+              >
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--hds-secondary)] text-lg font-medium"
+                >
+                  PH
+                </div>
                 <div class="flex-1 overflow-hidden">
                   <div class="text-sm font-medium">Pharmacy Central</div>
-                  <div class="truncate text-xs text-[var(--hds-muted-foreground)]">Prescription renewed</div>
+                  <div
+                    class="truncate text-xs text-[var(--hds-muted-foreground)]"
+                  >
+                    Prescription renewed
+                  </div>
                 </div>
               </div>
             </div>
@@ -563,12 +645,12 @@
           <a href="#">
             <img
               alt="Logo"
-              class="mx-2 mb-2 logo-color"
+              class="logo-color mx-2 mb-2"
               src="./images/logos/horizontal/hds-logo-hz-1024x400-hz-color.png"
               width="200px"
             /><img
               alt="Logo"
-              class="mx-2 mb-2 logo-white hidden"
+              class="logo-white mx-2 mb-2 hidden"
               src="./images/logos/horizontal/hds-logo-hz-white.svg"
               width="200px"
             />
@@ -581,7 +663,10 @@
                 <div
                   class="group flex items-center rounded-lg bg-[var(--hds-muted)] p-2"
                 >
-                  <img class="h-5 w-5" src="./images/icons/file-pen-solid.svg" />
+                  <img
+                    class="h-5 w-5"
+                    src="./images/icons/file-pen-solid.svg"
+                  />
                   <span class="ms-3 flex-1 whitespace-nowrap">Forms</span>
                 </div>
               </li>
@@ -608,7 +693,10 @@
                   class="group flex items-center rounded-lg p-2 hover:bg-[var(--hds-muted)]"
                   href="#"
                 >
-                  <img class="h-5 w-5" src="./images/icons/life-saver-solid.svg" />
+                  <img
+                    class="h-5 w-5"
+                    src="./images/icons/life-saver-solid.svg"
+                  />
                   <span class="ms-3 flex-1 whitespace-nowrap">Help</span>
                 </a>
               </li>
@@ -656,9 +744,7 @@
       <!-- ICONS -->
       <!-- ============================================================ -->
       <section class="mb-12">
-        <h2
-          class="mb-2 font-sans text-2xl font-light uppercase tracking-wide"
-        >
+        <h2 class="mb-2 font-sans text-2xl font-light tracking-wide uppercase">
           Icons
         </h2>
         <p class="mb-6 text-sm text-[var(--hds-muted-foreground)]">
@@ -675,7 +761,10 @@
           <div
             class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
           >
-            <img class="h-10 w-10" src="./images/icons/arrow-left-to-bracket.svg" />
+            <img
+              class="h-10 w-10"
+              src="./images/icons/arrow-left-to-bracket.svg"
+            />
             <span class="text-xs font-medium">arrow-left-to-bracket</span>
             <code
               class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
@@ -752,7 +841,10 @@
           <div
             class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
           >
-            <img class="h-10 w-10" src="./images/icons/file-copy-alt-solid.svg" />
+            <img
+              class="h-10 w-10"
+              src="./images/icons/file-copy-alt-solid.svg"
+            />
             <span class="text-xs font-medium">file-copy-alt-solid</span>
             <code
               class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
@@ -774,7 +866,10 @@
           <div
             class="flex flex-col items-center gap-2 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-4"
           >
-            <img class="h-10 w-10" src="./images/icons/folder-open-outline.svg" />
+            <img
+              class="h-10 w-10"
+              src="./images/icons/folder-open-outline.svg"
+            />
             <span class="text-xs font-medium">folder-open-outline</span>
             <code
               class="cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px] text-[var(--hds-muted-foreground)]"
@@ -813,9 +908,7 @@
       <!-- LOGOS -->
       <!-- ============================================================ -->
       <section class="mb-12">
-        <h2
-          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
-        >
+        <h2 class="mb-6 font-sans text-2xl font-light tracking-wide uppercase">
           Logos
         </h2>
 
@@ -824,7 +917,10 @@
           class="mb-6 grid grid-cols-3 gap-4 rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-6"
         >
           <div class="text-center">
-            <img class="mx-auto h-16" src="./images/logos/favicon/favicon.ico" />
+            <img
+              class="mx-auto h-16"
+              src="./images/logos/favicon/favicon.ico"
+            />
             <code
               class="mt-2 inline-block cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px]"
               onclick="navigator.clipboard.writeText('images/logos/favicon/favicon.ico')"
@@ -843,7 +939,10 @@
             >
           </div>
           <div class="text-center">
-            <img class="mx-auto h-16" src="./images/logos/favicon/hds-favicon.svg" />
+            <img
+              class="mx-auto h-16"
+              src="./images/logos/favicon/hds-favicon.svg"
+            />
             <code
               class="mt-2 inline-block cursor-pointer rounded bg-[var(--hds-muted)] px-1.5 py-0.5 text-[10px]"
               onclick="navigator.clipboard.writeText('images/logos/favicon/hds-favicon.svg')"
@@ -941,9 +1040,7 @@
       <!-- USAGE -->
       <!-- ============================================================ -->
       <section class="mb-12">
-        <h2
-          class="mb-6 font-sans text-2xl font-light uppercase tracking-wide"
-        >
+        <h2 class="mb-6 font-sans text-2xl font-light tracking-wide uppercase">
           Usage
         </h2>
         <div
@@ -971,15 +1068,21 @@
 
     <!-- Palette switcher script -->
     <script>
-      document.getElementById("palette-switcher").addEventListener("click", function (e) {
-        const btn = e.target.closest("[data-palette]");
-        if (!btn) return;
-        const html = document.documentElement;
-        html.className = btn.dataset.palette;
-        const isDark = btn.dataset.palette === "palette-dark";
-        document.querySelectorAll(".logo-color").forEach(el => el.classList.toggle("hidden", isDark));
-        document.querySelectorAll(".logo-white").forEach(el => el.classList.toggle("hidden", !isDark));
-      });
+      document
+        .getElementById("palette-switcher")
+        .addEventListener("click", function (e) {
+          const btn = e.target.closest("[data-palette]");
+          if (!btn) return;
+          const html = document.documentElement;
+          html.className = btn.dataset.palette;
+          const isDark = btn.dataset.palette === "palette-dark";
+          document
+            .querySelectorAll(".logo-color")
+            .forEach((el) => el.classList.toggle("hidden", isDark));
+          document
+            .querySelectorAll(".logo-white")
+            .forEach((el) => el.classList.toggle("hidden", !isDark));
+        });
     </script>
   </body>
 </html>

@@ -1,20 +1,19 @@
 name: Style CI
-# Gate: build, verified on a clean, credential-free clone (2026-10-08).
+# Gate: format (prettier --check) and build, verified on a clean, credential-free clone
+# (2026-10-08).
 # Every dependency, hds-style (healthdatasafe/style-package) included, is public, so
 # `npm ci` needs no token.
 # The `copy` script creates dist/ itself (locally dist/ is the gh-pages worktree; a
 # fresh checkout has none). Deploy (`npm run deploy`) never runs from CI.
-# Left out: `npm run format` (prettier --check) fails on a clean clone, with 6 files
-# unformatted (CHANGELOG.md, package.json, README.md, src/index.html, src/input.css,
-# src/public/README.md). Add it once those are formatted.
+# Left out: nothing. `npm run format` joined once the repo was formatted (2026-10-08).
 
 on:
   pull_request:
     branches:
-      - '*'
+      - "*"
   push:
     branches:
-      - 'main'
+      - "main"
 
 jobs:
   build:
@@ -25,16 +24,19 @@ jobs:
         node-version: [24.x]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Install Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Build
-      run: npm run build
+      - name: Format
+        run: npm run format
+
+      - name: Build
+        run: npm run build

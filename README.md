@@ -3,6 +3,7 @@
 Showcase site and asset repository for the HDS design system. Published at [style.datasafe.dev](https://style.datasafe.dev).
 
 Contains:
+
 - **Palettes showcase** — visual reference for `palette-doctor`, `palette-patient`, `palette-dark`
 - **Icons and logos** — served from `https://style.datasafe.dev/images/`
 - **Reference CSS** — `hds.css` / `hds.min.css`
