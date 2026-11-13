@@ -142,6 +142,100 @@
         </div>
 
         <h3 class="mt-6 mb-3 text-lg font-normal italic">
+          Colour roles (0.3.0, patient palette; doctor and dark follow)
+        </h3>
+        <p class="mb-3 text-sm text-[var(--hds-muted-foreground)]">
+          Tailwind names from
+          <code>hds-style/css/tailwind-map.css</code> (<code>text-body</code>,
+          <code>bg-toast</code>...). Where a palette does not set a role yet,
+          the map falls back to the value shown here.
+        </p>
+        <div
+          class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8"
+        >
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-text-body,var(--hds-foreground))]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-text-body
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-text-faint,var(--hds-muted-foreground))]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-text-faint
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-tint-border,var(--hds-border))]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-tint-border
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-control-off,var(--hds-input))]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-control-off
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-warning,#B45309)]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-warning
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg border border-[var(--hds-border)] bg-[var(--hds-warning-bg,transparent)]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-warning-bg
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-toast,var(--hds-foreground))]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-toast
+            </div>
+          </div>
+          <div>
+            <div
+              class="h-16 rounded-t-lg bg-[var(--hds-scrim,rgba(0,0,0,0.6))]"
+            ></div>
+            <div
+              class="rounded-b-lg border border-t-0 border-[var(--hds-border)] px-2 py-1 text-xs"
+            >
+              --hds-scrim
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-6 mb-3 text-lg font-normal italic">
           Primary Scale (Tailwind <code>primary-*</code>)
         </h3>
         <div class="mb-6 flex gap-1">
