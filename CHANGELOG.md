@@ -2,7 +2,17 @@
 
 ## [Unreleased]
 
+### Added
+
+- **Colour roles** (2026-11-13, plan 121): hds-style pinned to `#0.3.0`; a "Colour roles" row under the palette
+  swatches (`--hds-text-body`, `-text-faint`, `-tint-border`, `-control-off`, `-warning`, `-warning-bg`, `-toast`,
+  `-scrim`), with the fallback `tailwind-map.css` uses where a palette does not set a role yet.
+
 ### Fixed
+
+- **The published site had no styles** (2026-11-13): `index.html` loads `./hds.css`, but the build only wrote
+  `dist/hds.min.css`, so style.datasafe.dev served `hds.css` as a 404 (seen since the 2026-08-20 deploy). The build
+  now writes both.
 
 - **A deploy waits until the site serves it** (2026-11-08, B-2026-11-06-12): `scripts/deploy.sh` used to report success once
   the Pages branch was pushed, even when GitHub's own Pages deploy then failed and the previous build kept serving.

@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/healthdatasafe/style#readme",
   "scripts": {
-    "build": "npm run copy && npm run minify",
+    "build": "npm run copy && npm run minify && cp dist/hds.min.css dist/hds.css",
     "setup": "sh scripts/setup.sh",
     "deploy": "bash scripts/deploy.sh",
     "copy": "mkdir -p dist && rm -rf dist/* && cp -R src/* dist/ && rm dist/input.css",
@@ -31,7 +31,7 @@
     "serve": "npx livereload ./src"
   },
   "dependencies": {
-    "hds-style": "github:healthdatasafe/style-package#0.2.5"
+    "hds-style": "github:healthdatasafe/style-package#0.3.0"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.11",
