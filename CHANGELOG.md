@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Changed
+
+- **hds-style 0.4.0** (2026-11-14, plan 121): patient palette v2, body text in Inter with Inter Tight for `h1` and
+  display titles, and the colour roles set for the doctor palette too (heading updated).
+
 ### Added
 
 - **Colour roles** (2026-11-13, plan 121): hds-style pinned to `#0.3.0`; a "Colour roles" row under the palette
