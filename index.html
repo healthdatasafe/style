@@ -74,6 +74,18 @@
           >
             Dark
           </button>
+          <button
+            class="rounded-lg px-3 py-1.5 text-sm font-medium transition-shadow hover:shadow-md"
+            data-palette="palette-patient palette-dark"
+            id="btn-patient-dark"
+            style="
+              background-color: #111827;
+              color: #2dd4bf;
+              border: 2px solid #2dd4bf;
+            "
+          >
+            Patient dark
+          </button>
         </div>
       </div>
     </nav>
@@ -142,7 +154,7 @@
         </div>
 
         <h3 class="mt-6 mb-3 text-lg font-normal italic">
-          Colour roles (0.4.0, patient and doctor palettes; dark follows)
+          Colour roles (every palette since 0.5.0)
         </h3>
         <p class="mb-3 text-sm text-[var(--hds-muted-foreground)]">
           Tailwind names from
@@ -406,12 +418,13 @@
         <div
           class="rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-8"
         >
-          <div class="prose max-w-none">
+          <div class="prose max-w-none dark:prose-invert">
             <p class="mb-4 text-sm text-[var(--hds-muted-foreground)]">
-              Body: <strong>Inter</strong> (weight 300) &mdash; Headings:
+              Body and headings: <strong>Inter</strong> (body weight 300)
+              &mdash; h1 and display titles:
               <strong>Inter Tight</strong>
             </p>
-            <h1 class="font-sans font-light uppercase">Heading 1</h1>
+            <h1 class="font-display font-light uppercase">Heading 1</h1>
             <h2 class="font-normal">Heading 2</h2>
             <h3 class="italic">Heading 3</h3>
             <h4>Heading 4</h4>
@@ -1140,9 +1153,9 @@
         <div
           class="rounded-lg border border-[var(--hds-border)] bg-[var(--hds-card)] p-6"
         >
-          <div class="prose max-w-none">
+          <div class="prose max-w-none dark:prose-invert">
             <h4>Install the style package</h4>
-            <pre><code>npm install git+https://github.com/healthdatasafe/style-package.git</code></pre>
+            <pre><code>npm install 'hds-style@github:healthdatasafe/style-package#0.5.1'</code></pre>
 
             <h4>Import in your CSS</h4>
             <pre><code>@import "tailwindcss";
@@ -1150,7 +1163,8 @@
 @import "hds-style/css/palettes.css";</code></pre>
 
             <h4>Apply a palette</h4>
-            <pre><code>&lt;html class="palette-doctor"&gt;  &lt;!-- or palette-patient, palette-dark --&gt;</code></pre>
+            <pre><code>&lt;html class="palette-doctor"&gt;  &lt;!-- or palette-patient, palette-dark --&gt;
+&lt;html class="palette-patient palette-dark"&gt;  &lt;!-- patient dark (teal) --&gt;</code></pre>
 
             <h4>Reference images from CDN</h4>
             <pre><code>&lt;link rel="icon" href="https://style.datasafe.dev/images/logos/favicon/favicon.ico"&gt;
@@ -1169,7 +1183,7 @@
           if (!btn) return;
           const html = document.documentElement;
           html.className = btn.dataset.palette;
-          const isDark = btn.dataset.palette === "palette-dark";
+          const isDark = btn.dataset.palette.includes("palette-dark");
           document
             .querySelectorAll(".logo-color")
             .forEach((el) => el.classList.toggle("hidden", isDark));
