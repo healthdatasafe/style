@@ -4,6 +4,15 @@
 
 ### Changed
 
+- **hds-style 0.5.1** (2026-11-14, plan 121): dark tokens and the dark AA fixes; a "Patient dark" switch
+  (`palette-patient palette-dark`, teal); the install line pins a tag.
+
+### Fixed
+
+- **Dark: the typography sample was unreadable** (dark grey on the dark card): the two `prose` blocks get
+  `dark:prose-invert`, which `.palette-dark` now triggers (hds-style 0.5.0).
+- **`h1` in Inter Tight again**: `hds.css` set every heading to `--font-sans`, Inter since hds-style 0.4.0; `h1` now
+  takes `--font-display`, as in hds-style. The sample says which cut is which.
 - **hds-style 0.4.0** (2026-11-14, plan 121): patient palette v2, body text in Inter with Inter Tight for `h1` and
   display titles, and the colour roles set for the doctor palette too (heading updated).
 
