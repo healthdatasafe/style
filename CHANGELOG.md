@@ -4,11 +4,14 @@
 
 ### Changed
 
+- **hds-style 0.5.2** (2026-11-15, plan 121): the form inputs sample's outline (`--hds-input`, `#848C97`) meets WCAG
+  1.4.11 at 3:1; the install line pins `#0.5.2`.
 - **hds-style 0.5.1** (2026-11-14, plan 121): dark tokens and the dark AA fixes; a "Patient dark" switch
   (`palette-patient palette-dark`, teal); the install line pins a tag.
 
 ### Fixed
 
+- **CI green again**: `src/input.css` was not Prettier-formatted since the 0.5.1 re-pin (`npm run format` failed).
 - **Dark: the typography sample was unreadable** (dark grey on the dark card): the two `prose` blocks get
   `dark:prose-invert`, which `.palette-dark` now triggers (hds-style 0.5.0).
 - **`h1` in Inter Tight again**: `hds.css` set every heading to `--font-sans`, Inter since hds-style 0.4.0; `h1` now
