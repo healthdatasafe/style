@@ -77,18 +77,18 @@ hr {
   margin: 1.5em 0;
 }
 
-/* Lists */
-ul {
+/* Lists: only plain ones, so a list styled with utilities (tabs, nav) gets no bullets */
+ul:not([class]) {
   list-style: disc;
   padding-left: 1.5em;
   margin: 0.5em 0;
 }
-ol {
+ol:not([class]) {
   list-style: decimal;
   padding-left: 1.5em;
   margin: 0.5em 0;
 }
-li {
+:where(ul, ol):not([class]) > li {
   margin: 0.25em 0;
 }
 
@@ -142,7 +142,9 @@ pre code {
   padding: 1.5em 2em;
 }
 
-/* Images inline with text */
-img {
-  display: inline;
+/* Images inline with text; in the base layer so utilities (`hidden`, `block`) win */
+@layer base {
+  img {
+    display: inline;
+  }
 }

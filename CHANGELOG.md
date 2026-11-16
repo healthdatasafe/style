@@ -11,6 +11,10 @@
 
 ### Fixed
 
+- **Hidden logos showed and utility-styled lists had bullets**: `hds.css`'s `img { display: inline }` now sits in the
+  base layer, so `hidden` wins; the list defaults apply only to lists without a class (prose lists unchanged), so
+  the Tabs and Sidebar samples lose their bullets. The colour / white logo swap follows `dark:` instead of a script,
+  and the Sidebar and Icons-grid icons are inverted in dark palettes (they were black on the dark card).
 - **Accessibility (axe 0 at 390 and 1280, all four palettes)**: the patient switch button uses the patient primary
   `#0b7a70` (white text 5.2:1, was 3.7:1); the data-visualization chips put their number below the swatch instead of
   white on the chart colour; the add-connection icon button has an accessible name; sample icons carry `alt=""` (with
