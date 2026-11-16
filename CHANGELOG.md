@@ -11,6 +11,10 @@
 
 ### Fixed
 
+- **Accessibility (axe 0 at 390 and 1280, all four palettes)**: the patient switch button uses the patient primary
+  `#0b7a70` (white text 5.2:1, was 3.7:1); the data-visualization chips put their number below the swatch instead of
+  white on the chart colour; the add-connection icon button has an accessible name; sample icons carry `alt=""` (with
+  a visible label) or a descriptive `alt` (logos, favicons); the scrollable usage code blocks are keyboard-focusable.
 - **CI green again**: `src/input.css` was not Prettier-formatted since the 0.5.1 re-pin (`npm run format` failed).
 - **Dark: the typography sample was unreadable** (dark grey on the dark card): the two `prose` blocks get
   `dark:prose-invert`, which `.palette-dark` now triggers (hds-style 0.5.0).
