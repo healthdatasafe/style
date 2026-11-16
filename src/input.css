@@ -9,6 +9,11 @@
  * Tailwind's preflight resets all element styling. These rules restore
  * sensible defaults so plain HTML pages that link hds.min.css look good
  * without needing Tailwind utility classes.
+ *
+ * Rules outside a cascade layer beat every utility, so the element rules
+ * apply only to elements without a class: an element styled with utilities
+ * (the samples) follows its classes. They stay unlayered so they still win
+ * over the typography plugin on plain elements inside `prose`.
  */
 
 /* Body */
@@ -21,12 +26,7 @@ body {
 }
 
 /* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:is(h1, h2, h3, h4, h5, h6):not([class]) {
   font-family: var(--font-sans, "Inter", ui-sans-serif, system-ui, sans-serif);
   font-weight: 600;
   line-height: 1.25;
@@ -35,7 +35,7 @@ h6 {
   color: var(--hds-foreground, #111928);
 }
 /* h1 in the display cut, as hds-style's theme.css (0.4.0) */
-h1 {
+h1:not([class]) {
   font-family: var(
     --font-display,
     "Inter Tight",
@@ -46,24 +46,24 @@ h1 {
   );
   font-size: 2em;
 }
-h2 {
+h2:not([class]) {
   font-size: 1.5em;
 }
-h3 {
+h3:not([class]) {
   font-size: 1.25em;
 }
-h4 {
+h4:not([class]) {
   font-size: 1.1em;
 }
 
 /* Paragraphs */
-p {
+p:not([class]) {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
 /* Links */
-a {
+a:not([class]) {
   color: var(--hds-primary, #1c64f2);
   text-decoration: underline;
 }
@@ -72,7 +72,7 @@ a:hover {
 }
 
 /* Horizontal rule */
-hr {
+hr:not([class]) {
   border-top: 1px solid var(--hds-border, #e5e7eb);
   margin: 1.5em 0;
 }
@@ -93,27 +93,26 @@ ol:not([class]) {
 }
 
 /* Tables */
-table {
+table:not([class]) {
   width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
 }
-th,
-td {
+:is(th, td):not([class]) {
   padding: 0.5em 0.75em;
   text-align: left;
   border-bottom: 1px solid var(--hds-border, #e5e7eb);
 }
-th {
+th:not([class]) {
   font-weight: 600;
   background-color: var(--hds-muted, #f3f4f6);
 }
-tr:hover {
+tr:not([class]):hover {
   background-color: var(--hds-muted, #f3f4f6);
 }
 
 /* Code */
-code {
+code:not([class]) {
   font-family: var(--font-mono, ui-monospace, monospace);
   font-size: 0.875em;
   color: var(--hds-foreground, #111928);
@@ -129,7 +128,7 @@ pre {
   overflow-x: auto;
   margin: 1em 0;
 }
-pre code {
+pre code:not([class]) {
   background: none;
   padding: 0;
 }
