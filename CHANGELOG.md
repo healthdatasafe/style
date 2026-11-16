@@ -4,6 +4,10 @@
 
 ### Changed
 
+- **hds-style 0.6.0** (2026-11-16): Colour roles shows the new status roles (`--hds-success`, `--hds-info`,
+  `--hds-destructive-text`) and a row of status badges on their 10% tint; the install line pins `#0.6.0`. The Card
+  sample's title is in the foreground colour (its class asked for muted grey, which now applies), and logo images are
+  `block` so they sit above their label.
 - **hds-style 0.5.2** (2026-11-15, plan 121): the form inputs sample's outline (`--hds-input`, `#848C97`) meets WCAG
   1.4.11 at 3:1; the install line pins `#0.5.2`.
 - **hds-style 0.5.1** (2026-11-14, plan 121): dark tokens and the dark AA fixes; a "Patient dark" switch
@@ -11,6 +15,15 @@
 
 ### Fixed
 
+- **Samples follow their classes; narrow nav; colour logos on a light tile**: `hds.css`'s element defaults (links,
+  headings, paragraphs, `hr`, tables, `code`) apply only to elements without a class. They sat outside a cascade
+  layer, so they beat every utility: the Tabs and Sidebar links were primary and underlined, the section titles bold
+  instead of `font-light`, the icon path labels 14 px instead of `text-[10px]`, the table cells off their Flowbite
+  padding. They stay unlayered rather than moving to the base layer, so plain elements inside `prose` and plain pages
+  linking `hds.css` render as before (checked identical). axe stays at 0: the Icons "Flowbite" link carries
+  `underline`, and the table sample's scroller, which now scrolls at 390 px, is keyboard-focusable. At 390 px the nav wraps the palette switcher under the
+  title instead of hiding "Style Guide" and clipping the logo. The colour logo samples sit on a white tile in every
+  palette (they were barely visible on the dark card), the white ones on the dark tile.
 - **Hidden logos showed and utility-styled lists had bullets**: `hds.css`'s `img { display: inline }` now sits in the
   base layer, so `hidden` wins; the list defaults apply only to lists without a class (prose lists unchanged), so
   the Tabs and Sidebar samples lose their bullets. The colour / white logo swap follows `dark:` instead of a script,
