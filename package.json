@@ -13,7 +13,7 @@
     "Icons"
   ],
   "author": "Health Data Safe Foundation",
-  "license": "UNLICENSED",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/healthdatasafe/style/issues"
   },
