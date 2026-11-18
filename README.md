@@ -37,3 +37,7 @@ The site is deployed to GitHub Pages via the `gh-pages` branch.
 npm run build   # copies src to dist, minifies CSS
 # then push the dist/ contents to the gh-pages branch
 ```
+
+## License
+
+[BSD-3-Clause](LICENSE)
