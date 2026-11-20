@@ -40,4 +40,4 @@ npm run build   # copies src to dist, minifies CSS
 
 ## License
 
-[BSD-3-Clause](LICENSE)
+[BSD-3-Clause](LICENSE), except the HDS logos and the third-party icons: see [NOTICE](NOTICE).

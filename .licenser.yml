@@ -58,4 +58,4 @@ substitutions:
   AUTHOR_NAME: Health Data Safe
   AUTHOR_WEB: https://www.healthdatasafe.org
   SPDX: BSD-3-Clause
-  README_LICENSE: "[BSD-3-Clause](LICENSE)"
+  README_LICENSE: "[BSD-3-Clause](LICENSE), except the HDS logos and the third-party icons: see [NOTICE](NOTICE)."
