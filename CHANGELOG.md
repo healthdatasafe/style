@@ -4,6 +4,8 @@
 
 ### Changed
 
+- **Licence notice** (2026-11-20, plan 132): `NOTICE` reserves the HDS logos, badge and favicon
+  (`src/images/logos/`) and carries the Flowbite Icons MIT licence; the code stays BSD-3-Clause.
 - **hds-style 0.6.0** (2026-11-16): Colour roles shows the new status roles (`--hds-success`, `--hds-info`,
   `--hds-destructive-text`) and a row of status badges on their 10% tint; the install line pins `#0.6.0`. The Card
   sample's title is in the foreground colour (its class asked for muted grey, which now applies), and logo images are
