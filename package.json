@@ -26,6 +26,7 @@
     "css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/hds.css --watch",
     "dev": "npx concurrently --kill-others \"npm run css\" \"npm run serve\"",
     "format": "npx prettier . --check",
+    "lint": "npm run format",
     "format:fix": "npx prettier . --write",
     "minify": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/hds.min.css --minify",
     "serve": "npx livereload ./src",
