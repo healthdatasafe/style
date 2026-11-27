@@ -15,9 +15,9 @@ files:
       license: "{README_LICENSE}"
 
 ignore:
-- .git
-- node_modules
-- dist
+  - .git
+  - node_modules
+  - dist
 
 license: |
   BSD 3-Clause License
